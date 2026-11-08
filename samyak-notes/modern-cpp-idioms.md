@@ -39,7 +39,7 @@ The `it` variable is scoped to the if/else. For checks that only test existence,
 ```cpp
 std::vector<int> vals_;
 std::unordered_map<int, std::size_t> idx_;
-std::size_t count_ = 0;
+std::mt19937 rng_{std::random_device{}()};
 ```
 
 Initialize members where they're declared and drop the constructor (or `= default` it).
